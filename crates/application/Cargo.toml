@@ -1,0 +1,10 @@
+[package]
+name = "gaming-application"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gaming-domain = { path = "../domain" }
+hmac = "0.12"
+sha2 = "0.10"
+tokio = { version = "1", features = ["sync", "time", "rt"] }

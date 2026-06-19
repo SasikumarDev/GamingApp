@@ -1,0 +1,17 @@
+[package]
+name = "gaming-presentation"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+inject-linux = ["gaming-infrastructure/inject-linux"]
+
+[dependencies]
+gaming-domain   = { path = "../domain" }
+gaming-application = { path = "../application" }
+gaming-infrastructure = { path = "../infrastructure" }
+tauri  = { version = "2" }
+serde  = { version = "1", features = ["derive"] }
+tokio  = { version = "1", features = ["sync", "time", "rt"] }
+rand   = "0.8"
+sha2   = "0.10"

@@ -1,0 +1,30 @@
+[package]
+name = "gaming-infrastructure"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["audio", "input"]
+audio   = ["cpal", "opus"]
+input   = ["gilrs"]
+inject-linux = ["evdev"]
+# Windows input injection: inject-win = ["vigem-client"]
+
+[dependencies]
+gaming-domain      = { path = "../domain" }
+gaming-application = { path = "../application" }
+tokio              = { version = "1", features = ["net", "time", "rt", "rt-multi-thread"] }
+
+# ── Audio ──
+cpal               = { version = "0.18", optional = true }
+opus               = { version = "0.3",  optional = true }
+
+# ── Input Capture ──
+gilrs              = { version = "0.11", optional = true }
+
+# ── Input Injection (Linux uinput) ──
+evdev              = { version = "0.13", optional = true }
+
+# ── Video ──
+crabgrab           = { version = "0.4",  optional = true }
+ffmpeg-next        = { version = "8.1",  optional = true }
