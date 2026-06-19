@@ -4,6 +4,8 @@ on: [push, pull_request]
 jobs:
   build-windows:
     runs-on: windows-2025
+    env:
+      CMAKE_POLICY_VERSION_MINIMUM: "3.5"
     defaults:
       run:
         shell: powershell
