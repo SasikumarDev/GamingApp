@@ -6,8 +6,8 @@
   "build": {
     "frontendDist": "../frontend/dist/gaming-app/browser",
     "devUrl": "http://localhost:4200",
-    "beforeDevCommand": "cd ../frontend && npx ng build",
-    "beforeBuildCommand": "cd ../frontend && npx ng build"
+    "beforeDevCommand": "cd frontend && npx ng serve",
+    "beforeBuildCommand": "cd frontend && npx ng build"
   },
   "app": {
     "windows": [
