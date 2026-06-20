@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "identifier": "com.gamingapp.app",
   "build": {
-    "frontendDist": "../frontend/dist/gaming-app",
+    "frontendDist": "../frontend/dist/gaming-app/browser",
     "devUrl": "http://localhost:4200",
     "beforeDevCommand": "cd ../frontend && npx ng build",
     "beforeBuildCommand": "cd ../frontend && npx ng build"
